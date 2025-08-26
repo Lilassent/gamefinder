@@ -1,0 +1,47 @@
+.details-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 16px 24px;
+  margin-top: 16px;
+}
+
+.row {
+  display: contents;
+}
+
+.label {
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.value {
+  color: #ffffff;
+  word-break: break-word;
+}
+
+.expand-toggle {
+  display: inline;
+  padding: 0;
+  margin: 0 0 0 8px;
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  line-height: inherit;
+  vertical-align: baseline;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.expand-toggle:hover {
+  background: none;
+  text-decoration: underline;
+  opacity: 0.9;
+}
+
+.expandable p:last-child {
+  margin-bottom: 0;
+}

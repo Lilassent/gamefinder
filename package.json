@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/nodemailer": "^6.4.17",
+    "@types/pg": "^8.15.5",
+    "concurrently": "^9.2.0",
+    "prettier": "^3.6.2"
+  },
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter ./backend dev\" \"pnpm --filter ./webapp dev\""
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "firebase-admin": "^13.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^7.0.5",
+    "pg": "^8.16.3"
+  }
+}
