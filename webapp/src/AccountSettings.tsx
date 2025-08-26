@@ -21,7 +21,6 @@ const AccountSettings: React.FC = () => {
   const [profile, setProfile] = useState<Profile | null>(null);
   const [loading, setLoading] = useState(true);
   const [err, setErr] = useState<string | null>(null);
-
   const [totalCount, setTotalCount] = useState<number>(0);
 
   const [showPwdModal, setShowPwdModal] = useState(false);
@@ -79,30 +78,36 @@ const AccountSettings: React.FC = () => {
 
           <div className="as-row">
             <div className="as-col-left">Nickname</div>
-            <div className="as-value">lilassent</div>
+            <div className="as-value">{profile.nickname}</div>
             <div className="as-actions">
-              <button className="as-link">Change nickname</button>
+              <button type="button" className="as-link" onClick={() => setShowNickModal(true)}>
+                Change nickname
+              </button>
             </div>
           </div>
 
           <div className="as-row">
             <div className="as-col-left">Email Address</div>
-            <div className="as-value">alexkarayvanskiy23@gmail.com</div>
+            <div className="as-value">{profile.email}</div>
             <div className="as-actions">
-              <button className="as-link">Change email</button>
+              <button type="button" className="as-link" onClick={() => setShowEmailModal(true)}>
+                Change email
+              </button>
             </div>
           </div>
 
           <div className="as-row">
             <div className="as-col-left">Password</div>
             <div className="as-actions">
-              <button className="as-link">Change password</button>
+              <button type="button" className="as-link" onClick={() => setShowPwdModal(true)}>
+                Change password
+              </button>
             </div>
           </div>
         </div>
       )}
 
-      {/* Modal windows */}
+      {/* Modals */}
       {showPwdModal && <ChangePasswordModal onClose={() => setShowPwdModal(false)} />}
 
       {showNickModal && (
